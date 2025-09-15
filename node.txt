@@ -1,0 +1,12 @@
+node1
+
+[INFO] [09-15|05:56:48.717] Started P2P networking                   
+version=68 
+self=enode://a6b942c4a004398531c00a860f53ab5da0f7ee832d4ad7a5fd5252ccae812a81bc6e6706cedac72a28d293e4250fdf284101d31a34755e832c44f4bff52ec5c4@172.31.30.57:30303 
+name=erigon/v3.0.17-7d3cab29/linux-amd64/go1.23.12
+
+time="2025-09-15 05:56:51" level=info msg="Node started p2p server" multiAddr="/ip4/172.20.0.3/tcp/13000/p2p/16Uiu2HAmEju5rZGwqAtE2FaRyCv3ABojggLtPbNs6z2AobZsaaQt" prefix=p2p
+time="2025-09-15 05:56:51" level=info msg="Node started p2p server" multiAddr="/ip4/172.20.0.3/udp/13000/quic-v1/p2p/16Uiu2HAmEju5rZGwqAtE2FaRyCv3ABojggLtPbNs6z2AobZsaaQt" prefix=p2p
+time="2025-09-15 05:56:51" level=info msg="Node started external p2p server" multiAddr="/ip4/172.31.30.57/tcp/13000/p2p/16Uiu2HAmEju5rZGwqAtE2FaRyCv3ABojggLtPbNs6z2AobZsaaQt" prefix=p2p
+time="2025-09-15 05:56:51" level=info msg="Node started external p2p server" multiAddr="/ip4/172.31.30.57/udp/13000/quic-v1/p2p/16Uiu2HAmEju5rZGwqAtE2FaRyCv3ABojggLtPbNs6z2AobZsaaQt" prefix=p2p
+

@@ -22,8 +22,8 @@ services:
       # - EXTIP="$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)"
     command:
       - --config=/config/erigon.yaml
-      - --nat=extip:192.168.31.71
-      - --bootnodes=enode://e3be1105a6d2bd9d087e4e0470167df7d254b935dc51c5786c77a57b876c2edaa47c7a499eac19435ef93ef8c32b5a70f0b6a583d2090a1fea907105f9e46f48@172.31.30.93:30303
+      - --nat=extip:172.31.20.3
+      - --bootnodes="enode://a6b942c4a004398531c00a860f53ab5da0f7ee832d4ad7a5fd5252ccae812a81bc6e6706cedac72a28d293e4250fdf284101d31a34755e832c44f4bff52ec5c4@172.31.30.57:30303"
     restart: unless-stopped
     networks:
       - eth-net
@@ -46,10 +46,10 @@ services:
       - "6060:6060"
     command:
       - --config-file=/config/beacon.yaml
-      - --checkpoint-sync-url=http://172.31.30.93:3500
-      - --p2p-host-ip=192.168.31.71
+      - --checkpoint-sync-url=http://172.31.30.57:3500
+      - --p2p-host-ip=172.31.20.3
       - --suggested-fee-recipient=0xd744e2FD5597D5Bf2A2C81C772a69eFbaFD45AC3
-      - --peer="/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmLxXjXMpBz77DFGYmSZVZGHkUhDHu1cWrZsaW4DuER9yd"
+      - --peer="/ip4/172.31.30.57/tcp/13000/p2p/16Uiu2HAmEju5rZGwqAtE2FaRyCv3ABojggLtPbNs6z2AobZsaaQt"
     restart: unless-stopped
     depends_on:
       - erigon
