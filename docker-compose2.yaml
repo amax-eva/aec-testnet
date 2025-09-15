@@ -5,7 +5,7 @@ services:
   erigon:
     image: erigontech/erigon:latest
     container_name: erigon
-    # user: "root"
+    user: "root"
     volumes:
       - ./config:/config
       - ./secret:/secret
@@ -24,6 +24,7 @@ services:
     command:
       - --config=/config/erigon.yaml
       - --nat=extip:192.168.31.71
+      - --bootnodes=enode://e3be1105a6d2bd9d087e4e0470167df7d254b935dc51c5786c77a57b876c2edaa47c7a499eac19435ef93ef8c32b5a70f0b6a583d2090a1fea907105f9e46f48@172.31.30.93:30303
     restart: unless-stopped
     networks:
       - eth-net
@@ -46,8 +47,10 @@ services:
       - "6060:6060"
     command:
       - --config-file=/config/beacon.yaml
+      - --checkpoint-sync-url=http://172.31.30.93:3500
       - --p2p-host-ip=192.168.31.71
-      - --suggested-fee-recipient=0xA83CfEA9bc7BfBea625f8E7060148f310141D711
+      - --suggested-fee-recipient=0xd744e2FD5597D5Bf2A2C81C772a69eFbaFD45AC3
+      - --peer="/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAmLxXjXMpBz77DFGYmSZVZGHkUhDHu1cWrZsaW4DuER9yd"
     restart: unless-stopped
     depends_on:
       - erigon
@@ -68,8 +71,8 @@ services:
       - "8281:8281"
     command:
       - --config-file=/config/validator.yaml
-      - --wallet-dir=/wallets/wallet1
-      - --suggested-fee-recipient=0xA83CfEA9bc7BfBea625f8E7060148f310141D711
+      - --wallet-dir=/wallets/wallet2
+      - --suggested-fee-recipient=0xd744e2FD5597D5Bf2A2C81C772a69eFbaFD45AC3
     restart: unless-stopped
     depends_on:
       - beacon
