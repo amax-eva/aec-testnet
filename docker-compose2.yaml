@@ -1,5 +1,4 @@
-name: eva-testnet
-version: "3.9"
+name: aec-testnet
 
 services:
   erigon:

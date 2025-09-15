@@ -1,11 +1,10 @@
-name: eva-testnet
-version: "3.9"
+name: aec-testnet
 
 services:
   erigon:
     image: erigontech/erigon:latest
     container_name: erigon
-    # user: "root"
+    user: "root"
     volumes:
       - ./config:/config
       - ./secret:/secret
@@ -23,7 +22,7 @@ services:
       # - EXTIP="$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)"
     command:
       - --config=/config/erigon.yaml
-      - --nat=extip:192.168.31.71
+      - --nat=extip:172.31.30.57
     restart: unless-stopped
     networks:
       - eth-net
@@ -46,7 +45,7 @@ services:
       - "6060:6060"
     command:
       - --config-file=/config/beacon.yaml
-      - --p2p-host-ip=192.168.31.71
+      - --p2p-host-ip=172.31.30.57
       - --suggested-fee-recipient=0xA83CfEA9bc7BfBea625f8E7060148f310141D711
     restart: unless-stopped
     depends_on:
