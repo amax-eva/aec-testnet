@@ -1,0 +1,26 @@
+networkid: 2268
+datadir: /data/erigon
+log.dir.path: /logs
+authrpc.jwtsecret: /secret/jwt.hex
+# verbosity: debug
+verbosity: info
+port: 30303
+http: true
+http.addr: 0.0.0.0
+http.port: 8545
+http.api: "eth,erigon,engine,web3,net,debug,trace,txpool,admin"
+http.corsdomain: "*"
+http.vhosts: "*"
+ws: true
+ws.port: 8546
+allow-insecure-unlock: true
+v5disc: true
+p2p.protocol: 68
+authrpc.addr: 0.0.0.0
+authrpc.port: 8551
+authrpc.vhosts: "*"
+externalcl: true
+metrics: true
+metrics.addr: 0.0.0.0
+metrics.port: 6061
+torrent.port: 42069
