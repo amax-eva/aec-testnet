@@ -1,1 +1,1 @@
-cp ./network1-keys ../data/beacon/network-keys
+cp ./secret/network1-keys ../data/beacon/network-keys
