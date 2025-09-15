@@ -24,7 +24,8 @@ services:
       - --config=/config/erigon.yaml
       - --nat=extip:172.31.20.3
       - --nodekey=/secret/node2.key
-      - --bootnodes=enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303
+      - --staticpeers="enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303"
+      - --trustedpeers="enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303"
     restart: unless-stopped
     networks:
       - eth-net
@@ -50,7 +51,7 @@ services:
       - --checkpoint-sync-url=http://172.31.30.57:3500
       - --p2p-host-ip=172.31.20.3
       - --suggested-fee-recipient=0xd744e2FD5597D5Bf2A2C81C772a69eFbaFD45AC3
-      - --peer=/ip4/172.31.30.57/tcp/13000/p2p/16Uiu2HAkw8TkPFYWpwfMrTxQUcGrVdTJxjc1moJW1asx8goiBDiE
+      - --peer=/ip4/172.31.30.57/tcp/13000/p2p/16Uiu2HAmDmCLraqyx7STiAuG16vXD77orVQ8tLGYDru8DUnFtqT3
     restart: unless-stopped
     depends_on:
       - erigon
