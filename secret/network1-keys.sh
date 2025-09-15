@@ -1,0 +1,1 @@
+cp ./network1-keys ../data/beacon/network-keys
