@@ -21,9 +21,8 @@ services:
       - EXTIP=192.168.31.71
       # - EXTIP="$(ip addr show ens5 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)"
     command:
-      - --config=/config/erigon.yaml
+      - --config=/config/erigon3.yaml
       - --nat=extip:172.31.30.93
-      - --nodekey=/secret/node3.key
       - --bootnodes=enode://c69e39239666c591eefa5a48987cff5c288f2c457daf78c1c781c350a314fe7b5d1df68aebb836f5ce415684f87bcdb2ea28dcd18aba705d75b7e947c2973190@172.31.20.3:30303
     restart: unless-stopped
     networks:

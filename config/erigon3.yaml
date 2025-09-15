@@ -2,7 +2,7 @@ networkid: 12248
 datadir: /data/erigon
 log.dir.path: /logs
 authrpc.jwtsecret: /secret/jwt.hex
-nodekey: /secret/node1.key
+nodekey: /secret/node3.key
 # verbosity: debug
 verbosity: info
 port: 30303
@@ -27,5 +27,5 @@ metrics.port: 6061
 torrent.port: 42069
 nodiscover: true
 discovery.dns: ""
-# staticpeers: "enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303"
-# trustedpeers: "enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303"
+staticpeers: "enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303"
+trustedpeers: "enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303"

@@ -23,7 +23,6 @@ services:
     command:
       - --config=/config/erigon.yaml
       - --nat=extip:172.31.30.57
-      - --nodekey=/secret/node1.key
     restart: unless-stopped
     networks:
       - eth-net
