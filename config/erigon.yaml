@@ -24,3 +24,5 @@ metrics: true
 metrics.addr: 0.0.0.0
 metrics.port: 6061
 torrent.port: 42069
+nodiscover: true
+discovery.dns: ""

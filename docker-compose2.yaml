@@ -23,6 +23,7 @@ services:
     command:
       - --config=/config/erigon.yaml
       - --nat=extip:172.31.20.3
+      - --nodekey=/secret/node2.key
       - --bootnodes=enode://e2a50a17219a5477814b547f6d5ed4277b5c3a3a2f2fa15cf4e9e4188e3ef491c0e8589e3865b7edd0f8bcfc851cba751fee3dfdd4c4a0dac3dc1fea3b4c98d8@172.31.30.57:30303
     restart: unless-stopped
     networks:
