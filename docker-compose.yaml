@@ -47,6 +47,8 @@ services:
       - --config-file=/config/beacon.yaml
       - --p2p-host-ip=172.31.30.57
       - --suggested-fee-recipient=0xA83CfEA9bc7BfBea625f8E7060148f310141D711
+      - --peer=/ip4/172.31.20.3/tcp/13000/p2p/16Uiu2HAmHS9Bjihqp8hjMUkaiFZGKioPJ5CMNHfwFmXAAZigtFX6
+      - --peer=/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAm21QwYggasyMb6Yv5KEgCsdYvkzLoXF2Ct63uyGJWGL27
     restart: unless-stopped
     depends_on:
       - erigon

@@ -49,6 +49,7 @@ services:
       - --p2p-host-ip=172.31.20.3
       - --suggested-fee-recipient=0xd744e2FD5597D5Bf2A2C81C772a69eFbaFD45AC3
       - --peer=/ip4/172.31.30.57/tcp/13000/p2p/16Uiu2HAmDmCLraqyx7STiAuG16vXD77orVQ8tLGYDru8DUnFtqT3
+      - --peer=/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAm21QwYggasyMb6Yv5KEgCsdYvkzLoXF2Ct63uyGJWGL27
     restart: unless-stopped
     depends_on:
       - erigon
