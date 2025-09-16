@@ -50,3 +50,15 @@ time="2025-09-15 07:13:39" level=info msg="Node started p2p server" multiAddr="/
 time="2025-09-15 07:13:39" level=info msg="Node started external p2p server" multiAddr="/ip4/172.31.30.93/tcp/13000/p2p/16Uiu2HAm21QwYggasyMb6Yv5KEgCsdYvkzLoXF2Ct63uyGJWGL27" prefix=p2p
 time="2025-09-15 07:13:39" level=info msg="Node started external p2p server" multiAddr="/ip4/172.31.30.93/udp/13000/quic-v1/p2p/16Uiu2HAm21QwYggasyMb6Yv5KEgCsdYvkzLoXF2Ct63uyGJWGL27" prefix=p2p
 
+
+curl -s http://16.163.97.13:3500/eth/v1/beacon/headers/finalized
+
+{"execution_optimistic":false,"finalized":true,"data":{"header":{"message":{"slot":"0","proposer_index":"0","parent_root":"0x0000000000000000000000000000000000000000000000000000000000000000","state_root":"0xd283e08ef79174c0f54e5f8841c66dd11105f45b86399a679e0bc318a09a8c7a","body_root":"0xca4f98890bc98a59f015d06375a5e00546b8f2ac1e88d31b1774ea28d4b3e7d1"},"signature":"0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"},"root":"0x570deb4b848dc41e40feaef69ae9048a0a4880cd692bef51449886f2a00b9f67","canonical":true}}
+
+curl -s http://16.163.97.13:3500/eth/v1/beacon/states/head/finality_checkpoints
+
+{"execution_optimistic":false,"finalized":false,"data":{"previous_justified":{"epoch":"0","root":"0x0000000000000000000000000000000000000000000000000000000000000000"},"current_justified":{"epoch":"0","root":"0x0000000000000000000000000000000000000000000000000000000000000000"},"finalized":{"epoch":"0","root":"0x0000000000000000000000000000000000000000000000000000000000000000"}}}
+
+curl -s http://43.198.212.114:3500/eth/v1/beacon/headers/finalized
+
+curl -s http://18.163.81.118:3500/eth/v1/beacon/headers/finalized
