@@ -1,0 +1,28 @@
+{
+  "name": "EVA Tokens List",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "logoURI": "https://www.wjblog.top/images/my_head-touch-icon-next.png",
+  "timestamp": "2025-09-22 00:00:00.000+00:00",
+  "tokens": [
+    {
+      "chainId": 12248,
+      "address": "0xB841d97F0F4e774235C0374Ec705eA6005f09e76",
+      "name": "AAA Token",
+      "symbol": "AAA",
+      "decimals": 18,
+      "logoURI": "https://www.wjblog.top/images/aaa.png"
+    },
+    {
+      "chainId": 12248,
+      "address": "0xfd684C901e40dC4A5F4CBCcB4b47Bd1A44a7fB4e",
+      "name": "BBB Token",
+      "symbol": "BBB",
+      "decimals": 18,
+      "logoURI": "https://www.wjblog.top/images/bbb.png"
+    }
+  ]
+}
